@@ -316,7 +316,8 @@ html {
 
     .slideshow div {
         margin: auto;
-        width: 100%;
+        width: 40%;
+        height: 40%;
     }
 
     .btn-booking {
@@ -328,7 +329,6 @@ html {
         margin-bottom: 7rem;
         margin-right: 0;
     }
-
 
     .artists {
         font-size: 4rem;
