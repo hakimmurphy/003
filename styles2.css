@@ -289,7 +289,7 @@ html {
         width: 4rem;
         height: 4rem;
         z-index: 100;
-        top: 2rem;
+        top: 3rem;
         right: 4rem;
         display: flex;
         flex-direction: column;
@@ -310,7 +310,7 @@ html {
     }
 
     .section-3 {
-        height: 75rem;
+        height: 50rem;
     }
 
     .section-3-container {
@@ -320,8 +320,8 @@ html {
 
     .slideshow div {
         margin: auto;
-        width: 40%;
-        height: 40%;
+        width: 50%;
+        height: 50%;
     }
 
     .btn-booking {
