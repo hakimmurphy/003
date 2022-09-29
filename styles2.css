@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --primary-color: #6F38C5;
+    --link-color: #F8CB2E;
+    --black-color: #000;
+    --white-color: #fff;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section 1 */
+.section-1 {
+    width: 100%;
+    height: 10rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.twisted-title {
+    color: var(--link-color);
+    font-size: 2rem;
+    font-weight: 400;
+    padding-left: 2rem;
+}
+
+.navbar-links {
+    padding-right: 2rem;
+}
+
+.navbar-link {
+    color: var(--link-color);
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+/* Section 2 */
+.section-2 {
+    width: 100%;
+    height: 50rem;
+    margin: 10rem 0;
+}
+
+.section-2-text {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    width: 70%;
+    padding-top: 12rem;
+}
+
+/* Section 3 */
+.section-3 {
+    width: 100%;
+    height: 100rem;
+    /* padding: 5rem 0; */
+
+    margin-bottom: 2rem;
+}
+
+.section-3-container {
+    width: 100%;
+    height: 100rem;
+    background-color: var(--primary-color);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.slideshow div {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 5s;
+    margin: 7rem 7rem 7rem 7rem;
+    border-radius: 2rem;
+}
+
+.slideshow div.change {
+    opacity: 1;
+}
+
+.btn-booking {
+    margin-left: 10rem;
+}
+
+.btn-piercing {
+    margin-right: 10rem;
+}
+
+.btn {
+    background-color: var(--link-color);
+    color: var(--primary-color);
+    width: 15rem;
+    height: 5rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+/* Section 4 */
+.section-4 {
+    width: 100%;
+    height: 100%;
+}
+
+.section-4-container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.artists {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 7rem;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+}
+
+.artists-images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.artist-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
+.artist-img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 3rem;
+}
+
+.artist-container p {
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--primary-color);
+    margin-top: 15rem;
+}
+
+.footer-content {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    padding-top: 2.5rem;
+}
+
+.footer-content p {
+    font-size: 1.3rem;
+    color: var(--link-color);
+}
+
+.footer-content-phone {
+    display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 1500px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 900px) {
+    .slideshow div {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .twisted-title {
+        font-size: 1.5rem;
+    }
+
+    .navbar-links {
+        visibility: hidden;
+    }
+
+    @keyframes animateNavbar {
+        0% {
+            top: -8rem;
+        }
+
+        100% {
+            top: 0;
+        }
+    }
+
+    .section-1.change {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .change .section-1 {
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.2s;
+    }
+
+    .change .twisted-title {
+        display: none;
+    }
+
+    .change .navbar-links {
+        color: var(--link-color);
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .change .navbar-link {
+        font-size: 5rem;
+    }
+
+    .menu {
+        width: 4rem;
+        height: 4rem;
+        z-index: 100;
+        top: 2rem;
+        right: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .line {
+        width: 100%;
+        height: 0.2rem;
+        background-color: var(--link-color);
+        transition: transform 0.3s;
+    }
+
+    .section-2-text {
+        padding-top: 8rem;
+    }
+
+    .section-3-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .btn-booking {
+        margin-top: 7rem;
+        margin-left: 0rem;
+    }
+
+    .btn-piercing {
+        margin-bottom: 7rem;
+        margin-right: 0;
+    }
+
+
+    .artists {
+        font-size: 4rem;
+    }
+
+    .artists-images {
+        flex-direction: column;
+    }
+
+    .artist-container {
+        padding-bottom: 2rem;
+    }
+
+    .footer {
+        height: 20rem;
+    }
+
+    .footer-content {
+        display: none;
+    }
+
+    .footer-content-phone {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-left: 2rem;
+    }
+
+    .navbar-link2 {
+        font-size: 2rem;
+        color: var(--link-color);
+    }
+}
+
+@media (max-width: 470px) {
+    .section-2-text {
+        font-weight: 300;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .section-2 {
+        height: 30rem;
+    }
+
+    .section-2-text {
+        font-size: 2rem;
+    }
+}
