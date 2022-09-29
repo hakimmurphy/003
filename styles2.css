@@ -309,6 +309,10 @@ html {
         padding-top: 8rem;
     }
 
+    .section-3 {
+        height: 75rem;
+    }
+
     .section-3-container {
         flex-direction: column;
         justify-content: center;
