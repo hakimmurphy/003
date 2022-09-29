@@ -100,7 +100,7 @@ html {
     width: 60%;
     height: 60%;
     position: absolute;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
@@ -310,7 +310,7 @@ html {
     }
 
     .section-3 {
-        height: 50rem;
+        height: 70rem;
     }
 
     .section-3-container {
